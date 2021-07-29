@@ -55,7 +55,7 @@ end
 %% RECENTERING
 if 1
     load([filename,'.linegraph.mat']); 
-    clc, run(sprintf('./%s.m',filename))  %reload options
+    clc, run(sprintf('./data/camel_3n/%s.m',filename))  %reload options
     [P,SK] = rosa_recenter( P, alpha_recenter );    
     curve_write_cg( SK, [filename,'.skeleton.cg'] );
     save([filename,'.recenter.mat']);    
